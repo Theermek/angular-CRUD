@@ -1,0 +1,149 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "fullName": "wddawd",
+      "shortName": "daWD",
+      "INN": "124",
+      "KPP": "3123",
+      "founder": "FdDSF",
+      "address": "aesfea",
+      "phone": "afsef"
+    },
+    {
+      "id": 3,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 4,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 5,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 6,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 7,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 8,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 9,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 10,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 11,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    },
+    {
+      "id": 12,
+      "fullName": null,
+      "shortName": null,
+      "INN": null,
+      "KPP": null,
+      "founder": null,
+      "address": null,
+      "phone": null
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullName": "Ermek Akella",
+      "email": "moose@gmail.com",
+      "password": "21121212",
+      "id": 1
+    },
+    {
+      "fullName": "Ermek Akella",
+      "email": "akelov.ermek@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "fullName": "john",
+      "email": "afawfa@gmail.com",
+      "password": "qwerty",
+      "id": 4
+    },
+    {
+      "fullName": "random",
+      "email": "random@gmail.com",
+      "password": "1111",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

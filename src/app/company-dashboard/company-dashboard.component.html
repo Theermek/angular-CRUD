@@ -1,0 +1,95 @@
+<nav class="nav navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <h1 style="color:azure">Accounting of branches</h1>
+        <div class="d-flex">
+            <button (click)="clickAddCompany()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add branch
+            </button>
+            <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+        </div>
+    </div>
+
+</nav>
+  <table class="table table-dark table-striped mt-2">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Полное наименование</th>
+            <th scope="col">Сокращенное наименование</th>
+            <th scope="col">ИНН</th>
+            <th scope="col">КПП</th>
+            <th scope="col">Учредитель(ФИО)</th>
+            <th scope="col">Адрес</th>
+            <th scope="col">Телефон</th>
+            <th scope="col">action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of companyData">
+            <td>{{row.id}}</td>
+            <td>{{row.fullName}}</td>
+            <td>{{row.shortName}}</td>
+            <td>{{row.INN}}</td>
+            <td>{{row.KPP}}</td>
+            <td>{{row.founder}}</td>
+            <td>{{row.address}}</td>
+            <td>{{row.phone}}</td>
+            <td>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning" (click)="editCompany(row)">Edit</button>
+                <button class="btn btn-danger mx-2" (click)="deleteCompany(row)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Company details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]='formValue'>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Полное наименование</label>
+                  <input type="text" formControlName="fullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Сокращенное наименование</label>
+                  <input type="text" formControlName="shortName" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">ИНН</label>
+                  <input type="text" formControlName="INN" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">КПП</label>
+                  <input type="text" formControlName="KPP" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Учредитель(ФИО)</label>
+                  <input type="text" formControlName="founder" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Адрес</label>
+                  <input type="text" formControlName="address" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Телефон</label>
+                  <input type="text" formControlName="phone" class="form-control" id="exampleInputPassword1">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postCompanyDetails()" class="btn btn-primary">Add company</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateCompanyDetails()" class="btn btn-primary">Update company</button>
+        </div>
+      </div>
+    </div>
+  </div>

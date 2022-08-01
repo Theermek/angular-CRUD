@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                </div>
+                    <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Full name</label>
+                            <input formControlName="fullName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <span class="text-danger" *ngIf="signUpForm.controls['fullName'].dirty && signUpForm.hasError('required','fullName')">*Full name is required</span>
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <span class="text-danger" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">*Email address is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                          <span class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">*Password is required</span>
+                        </div>
+                        <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-primary mb-10">Submit</button>
+                    </form>
+                    <a style="color:aliceblue; margin-top:10px; opacity: 0.5;" routerLink="/login"> Click to Login</a>
+            </div>
+        </div>
+    </div>
+</div>
